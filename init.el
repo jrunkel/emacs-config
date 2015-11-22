@@ -1,4 +1,4 @@
-(add-to-list 'load-path "~/.emacs.d")
+(add-to-list 'load-path (expand-file-name "~/.emacs.d/lisp"))
 (add-to-list 'load-path "~/.emacs.d/vendor/")
 (add-to-list 'load-path "~/.emacs.d/vendor/rails-reloaded")
 
@@ -10,7 +10,7 @@
    t)
   (package-initialize))
 
-(setq custom-file "~/.emacs.d/custom.el")
+(setq custom-file "~/.emacs.d/lisp/custom.el")
 (load custom-file nil t)
 
 (load "vendor" nil t)
@@ -22,13 +22,13 @@
 (maximize-editor)
 (ido-mode 1)
 
-(windmove-default-keybindings)
+;;(windmove-default-keybindings)x
 (winner-mode)
 (server-start)
 
 (rvm-use-default)
 
-(load "color/custom-dark" nil t)
+(load "~/.emacs.d/color/custom-dark" nil t)
 (color-theme-custom-dark)
 
 (put 'upcase-region 'disabled nil)
